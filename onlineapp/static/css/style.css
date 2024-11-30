@@ -10,6 +10,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(140, 204, 247, 0.5);
+    
 }
 .heading {
     text-align: center;
@@ -205,10 +206,18 @@ body {
 .carousel-caption{
     color:#007bff
 }
-   
-.wan{
-    color: #fd0303;
-
-
+ 
+.wan {
+    color: rgb(243, 9, 9); 
+    border: 5px solid #121313; 
+    padding: 10px; 
+    background-color: white; 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    border-radius: 5px; 
+    width: fit-content; 
+    margin: auto; 
 }
+
+
 
