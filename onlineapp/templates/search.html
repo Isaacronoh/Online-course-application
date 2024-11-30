@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Offered</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .wan{
+            color: aqua;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+  
+    {% block content %}
+    <div class="container table-container">
+        <h1 class="heading">Courses Offered are as follows</h1>
+        {% if courses %}
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-primary text-center">
+                    <tr>
+                        <th>S/No</th>
+                        <th>Course</th>
+                        <th>Code</th>
+                        <th>Entry Requirement</th>
+                        <th>Duration</th>
+                        <th>Exam Body</th>
+                        <th>Mode of Study</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                       
+
+                            {% for course in courses %}
+                            <tr>
+        
+                                <td>{{course.id}}</td>
+                                <td>{{course.course_name}}</td>
+                                <td>{{course.code}}</td>
+                                <td>{{course.entry_requirements}}</td>
+                                <td>{{course.duration}}</td>
+                                <td>{{course.exam_body}}</td>
+                                <td>{{course.mode_of_study}}</td>
+                            </tr>
+                            {%  endfor %}
+                       
+
+                </tbody>
+            </table>
+        </div>
+                {% else %}
+                    <h1 class="wan">INVALID COURSE</h1>
+                {% endif %}
+        <div class="instructions">
+            <p>
+                Qualified applicants should apply by filling out an application form below. </p>
+                
+                
+        </div>
+        <div class="container mt-5">
+            <a href="{% url 'apply' %}" class="apply-button">!!! APPLY HERE !!!</a>
+        </div>
+            
+        
+    </div>
+
+
+
+    {% endblock %}
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    
+</body>
+</html>

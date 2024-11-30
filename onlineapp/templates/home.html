@@ -1,0 +1,497 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wajir East Technical Vocational College</title>
+
+
+    <style>
+
+          /* apply button */
+
+          .dynamic-apply-button {
+            display: block; 
+            width: 100%; 
+            border-radius: 50px;
+            text-align: center; 
+            padding: 15px; 
+            font-size: 28px; 
+            font-weight: bold; 
+            text-decoration: none; 
+            animation: blinking 1s infinite; 
+            color: white; 
+            border-bottom: #007BFF 5px solid;
+        }
+        
+        .dynamic-apply-button:hover {
+            background-color: green; /* Changes background color to green on hover */
+            color: white; /* Ensures text is white on hover */
+            animation: none; /* Stops the blinking effect on hover */
+        }
+        
+        /* Blinking effect for red and cyan colors */
+        @keyframes blinking {
+            0% {
+                background-color: red;
+            }
+            50% {
+                background-color: rgb(138, 16, 252);
+            }
+            100% {
+                background-color: red;
+            }
+        }
+
+        
+        /* end of apply here */
+
+        .brand-heading {
+            font-family: 'Georgia', serif; 
+            font-size: 1.5rem; 
+            color: #FFFACD;
+        }
+
+
+        .navbar-nav .nav-link {
+            font-size: 1.2rem;
+            color: white; /
+        }
+
+
+        .navbar-brand img {
+            margin-right: 10px;
+        }
+
+        .bg-cream-yellow {
+            background-color: #FFFACD; 
+            padding: 40px; 
+            border-radius: 10px; 
+        }
+
+        
+        .bg-cream-yellow h2, .bg-cream-yellow h4, .bg-cream-yellow p {
+            color: #333333; 
+        }
+
+        /* carding changes */
+
+        .card {
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.card-img-top {
+    max-height: 200px;
+    object-fit: cover; 
+}
+
+/* newcard */
+
+.bg-cream-yellow {
+    background-image: url("{% static 'images/bg1.jpg' %}");
+    background-color: #FFFACD; 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    padding: 50px 0; 
+    color: #333; 
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* contacts */
+
+.contact-icons {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center; 
+    font-size: 20px;
+    text-decoration: none; 
+    color: #333; 
+    transition: color 0.3s ease;
+}
+
+.icon-text {
+    margin-left: 20px; 
+    font-size: 18px;
+    font-weight: bold;
+    color:aliceblue;
+}
+
+/* Icon Colors */
+.icon-link i {
+    transition: transform 0.3s ease;
+}
+
+/* Phone Icon - White */
+.icon-link i.fa-phone-alt {
+    color: white;
+    background-color: #007BFF; 
+    padding: 10px;
+    border-radius: 50%; 
+}
+
+/* WhatsApp Icon - Green */
+.icon-link i.fa-whatsapp {
+    color: white;
+    background-color: #25D366; 
+    padding: 10px;
+    border-radius: 50%; 
+}
+
+/* Email Icon - Gmail Red */
+.icon-link i.fa-envelope {
+    color: white;
+    background-color: #D44638; 
+    padding: 10px;
+    border-radius: 50%; 
+}
+
+/* Facebook Icon - Blue */
+.icon-link i.fa-facebook-f {
+    color: white;
+    background-color: #1877F2; 
+    padding: 10px;
+    border-radius: 50%; 
+}
+
+/* counter */
+
+.counter-card {
+    background-color: #f8f9fa;
+    color: #ce0606;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.counter {
+    font-size: 40px;
+    font-weight: bold;
+    color: #658843;
+}
+
+/* counter background */
+#count {
+    background-color: rgb(125, 250, 250);
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    padding: 50px 0; 
+    color: #333; 
+
+}
+
+
+
+
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <!-- Logo on the Left -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="{% static 'images/logo.png' %}" alt="Logo" width="60" height="60" 
+                 class="d-inline-block align-text-top me-2">
+            <span class="fw-bold brand-heading">Wajir East TVC</span>
+        </a>
+        
+        <!-- Toggler for Mobile View -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link fs-5" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5" href="{% url 'about_us' %}">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5" href="{% url 'courses' %}">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5" href="{% url 'studentlogin' %}">Student Portal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5" href="{% url 'stafflogin' %}">Staff Portal</a>
+                </li>
+            </ul>
+
+            <!-- Search Form -->
+            <form class="d-flex ms-3" role="search" method="get" action="/search/">
+                <input class="form-control me-2" type="search" aria-label="Search" name="search">
+                <button class="btn btn-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+
+    <!-- Caption Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            {% for slide in slider %}
+            <button 
+                type="button" 
+                data-bs-target="#carouselExampleCaptions" 
+                data-bs-slide-to="{{ forloop.counter0 }}" 
+                class="{% if forloop.first %}active{% endif %}" 
+                aria-current="{% if forloop.first %}true{% endif %}">
+            </button>
+            {% endfor %}
+        </div>
+        
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+            {% for slide in slider %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <img src="{{ slide.slider_image.url }}" class="d-block w-100" alt="{{ slide.tittle }}" style="height: 550px;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>{{ slide.tittle }}</h5>
+                    <p>{{ slide.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    
+        <!-- Navigation Buttons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    
+
+
+
+    <hr>
+    <!-- Main Content Section -->
+    <div class="my-5 bg-cream-yellow">
+        <h2 class="text-center" id="h2">Welcome to Wajir East Technical and Vocational College</h2>
+        <p class="text-center">We are located in Wajir county, Wajir East constituency, Wagberi location opposite Wajir radio community. <br>
+            Only 5 kilometers from Wajir town.</p>
+        <p class="text-center">Empowering students with practical skills for real-world challenges.</p>
+    </div>
+    <hr>
+        <div class="row text-center">
+            <!-- First Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/teachers.jpg' %}" class="card-img-top rotate-img" alt="Trainers" width="300" height="300">
+                    <div class="card-body">
+                        <h4 class="card-title">Qualified Trainers</h4>
+                        <p class="card-text">Our team of experienced professionals is committed to your success in your career.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Second Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/build1.jpg' %}" class="card-img-top rotate-img" alt="School" width="300" height="300">
+                    <div class="card-body">
+                        <h4 class="card-title">Modern Facilities</h4>
+                        <p class="card-text">We have well-equipped labs and classrooms which provide a good learning environment.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Third Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/plant.jpg' %}" class="card-img-top rotate-img" alt="Tree" width="300" height="300">
+                    <div class="card-body">
+                        <h4 class="card-title">Affordable Learning Institution</h4>
+                        <p class="card-text">Access quality education without bulk payment, we help you get government sponsorship.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+<!-- students counter -->
+<hr>
+
+<div class="my-5" id="count">
+    <h2 class="text-center"><u>Student Statistics</h2></u></h2>
+    <div class="row text-center">
+        <!-- Students on Attachment -->
+        <div class="col-md-4">
+            <div class="counter-card">
+                <h4>Students on Attachment </h4>
+                <p class="counter">{{ attachment }}</p>
+            </div>
+        </div>
+        <!-- Students in Session -->
+        <div class="col-md-4">
+            <div class="counter-card">
+                <h4>Students in Session</h4>
+                <p class="counter">{{ session }}</p>
+            </div>
+        </div>
+        <!-- Graduates -->
+        <div class="col-md-4">
+            <div class="counter-card">
+                <h4>Graduates</h4>
+                <p class="counter">{{ graduated }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<!-- end of students counter -->
+
+
+        
+        </div>
+    </div>
+    
+<!-- apply here button -->
+
+<div class="container mt-5">
+    <a href="{% url 'apply' %}" class="dynamic-apply-button">APPLY NOW</a>
+</div>
+<hr>
+
+<!-- end of apply here button -->
+
+    
+
+    <!-- announcement section -->
+
+
+    <div class="container mt-4">
+        <div class="row">
+            
+          <div class="col-md-4">
+            <div class="card text-bg-success">
+              <div class="card-header">Announcements</div>
+              <div class="card-body">
+            <ol>
+                <li><h5 class="card-title">{{ card1.tittle1 }}</h5></li>
+            </ol>
+                <p class="card-text"> {{ card1.description1 }} </p>
+              </div>
+            </div>
+          </div>
+         
+  
+
+          <div class="col-md-4">
+            <div class="card text-bg-success">
+              <div class="card-header">Important Links</div>
+              <div class="card-body">
+                <h5 class="card-title">{{ card2.tittle2 }}</h5>
+                <p class="card-text">{{card2.description2}}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="card text-bg-success">
+              <div class="card-header">School Tenders</div>
+              <div class="card-body">
+                <h5 class="card-title">{{ card3.tittle3 }}</h5>
+                <p class="card-text">{{card3.description3}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!-- end of announcement section -->
+<hr>
+
+<!-- map -->
+
+<div class="my-5">
+    <h3 class="text-center">Our Location</h3>
+    <p class="text-left">Wajir East Technical and Vocational College, Wajir, Kenya</p>
+    <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1409.9403227727446!2d40.07511385954449!3d1.7705601912813624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1732606303364!5m2!1sen!2ske" 
+        width="100%" 
+        height="450" 
+        style="border:skyblue,3px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    </div>
+</div>
+
+
+<!-- end of map -->
+
+<hr>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-4">
+        <div class="container text-center">
+            <div class="contact-icons">
+                <!-- Phone Icon with Text -->
+                <a href="tel:+1234567890" class="icon-link" title="Call Us">
+                    <i class="fas fa-phone-alt"></i>
+                    <span class="icon-text">0700 201 920</span>
+                </a>
+            
+                <!-- WhatsApp Icon with Text and Phone Number -->
+                <a href="https://wa.me/+1234567890" class="icon-link" target="_blank" title="Chat on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="icon-text">0700 201 920</span>
+                </a>
+            
+                <!-- Email Icon with Text -->
+                <a href="mailto:example@example.com" class="icon-link" title="Send an Email">
+                    <i class="fas fa-envelope"></i>
+                    <span class="icon-text">www.wetvc@gmail.com</span>
+                </a>
+            
+                <!-- Facebook Icon with Text -->
+                <a href="https://facebook.com/yourpage" class="icon-link" target="_blank" title="Visit us on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span class="icon-text">wajir East TVC</span>
+                </a>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

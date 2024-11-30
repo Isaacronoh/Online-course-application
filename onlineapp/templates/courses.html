@@ -1,0 +1,166 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Offered</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+
+</head>
+
+<body>
+    
+  
+    {% block content %}
+    <div class="container table-container">
+        <h1 class="heading">Courses Offered are as follows</h1>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-primary text-center">
+                    <tr>
+                        <th>S/No</th>
+                        <th>Course</th>
+                        <th>Code</th>
+                        <th>Entry Requirement</th>
+                        <th>Duration</th>
+                        <th>Exam Body</th>
+                        <th>Mode of Study</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Computer Technician Level 6</td>
+                        <td>ICT</td>
+                        <td>C- and above</td>
+                        <td>3 Years</td>
+                        <td>CDACC</td>
+                        <td>Regular</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Computer Technician Level 5</td>
+                        <td>CT</td>
+                        <td>D and above</td>
+                        <td>2 Years</td>
+                        <td>CDACC</td>
+                        <td>Regular</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Electronics Engineering (Power Option) Level 6</td>
+                        <td>EE</td>
+                        <td>C- and above</td>
+                        <td>3 Years</td>
+                        <td>CDACC</td>
+                        <td>Regular</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Electrical Operation (Power Option) Level 5</td>
+                        <td>EO</td>
+                        <td>D and above</td>
+                        <td>2 Years</td>
+                        <td>CDACC</td>
+                        <td>Regular</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Social Work and Community Development Level 6</td>
+                        <td>SW</td>
+                        <td>C- and above</td>
+                        <td>3 Years</td>
+                        <td>CDACC</td>
+                        <td>Regular</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Social Work and Community Development Level 5</td>
+                        <td>SW</td>
+                        <td>D and above</td>
+                        <td>2 Years</td>
+                        <td>CDACC</td>
+                        <td>Regular</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Business Management Level 6</td>
+                        <td>BM</td>
+                        <td>C- and above</td>
+                        <td>3 Years</td>
+                        <td>CDACC</td>
+                        <td>Regular</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Business Management Level 5</td>
+                        <td>BM</td>
+                        <td>D and above</td>
+                        <td>2 Years</td>
+                        <td>CDACC</td>
+                        <td>Regular</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Fashion and Design Level 6</td>
+                        <td>FD</td>
+                        <td>C- and above</td>
+                        <td>3 Years</td>
+                        <td>CDACC</td>
+                        <td>Regular</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Fashion and Design Level 5</td>
+                        <td>FD</td>
+                        <td>D and above</td>
+                        <td>2 Years</td>
+                        <td>CDACC</td>
+                        <td>Regular</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Human Resource Management Level 6</td>
+                        <td>HRM</td>
+                        <td>C- and above</td>
+                        <td>3 Years</td>
+                        <td>CDACC</td>
+                        <td>Regular</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Human Resource Management Level 5</td>
+                        <td>HRM</td>
+                        <td>D and above</td>
+                        <td>2 Years</td>
+                        <td>CDACC</td>
+                        <td>Regular</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="instructions">
+            <p>
+                Qualified applicants should apply by filling out an application form below. </p>
+                
+                
+        </div>
+        <div class="container mt-5">
+            <a href="{% url 'apply' %}" class="apply-button">!!! APPLY HERE !!!</a>
+        </div>
+            
+        
+    </div>
+    {% endblock %}
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    
+</body>
+</html>
