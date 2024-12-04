@@ -1,0 +1,7 @@
+<!-- staff_enter_results.html -->
+<h1>Enter Student Marks</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>

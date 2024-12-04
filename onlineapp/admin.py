@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Status,Slider,Card1,Card2,Card3,Application,Course
+from .models import Status,Slider,Card1,Card2,Card3,Application,Course,Finance
 # Register your models here.
 
 admin.site.register(Status)
@@ -9,3 +9,5 @@ admin.site.register(Card2)
 admin.site.register(Card3)
 admin.site.register(Application)
 admin.site.register(Course)
+admin.site.register(Finance)
+

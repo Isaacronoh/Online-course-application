@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Details</title>
+    <link rel="stylesheet" href="{% static 'css/finance.css' %}">
+</head>
+<br>
+<body>
+   
+    <div class="finance-container">
+        <p class="p1">Financial statement for : {{ application.name }} </p>
+        <table class="finance-table">
+            <tr>
+                <th>Total Billed</th>
+                <td>{{ total_billed }}</td>
+            </tr>
+            <tr>
+                <th>Total Paid</th>
+                <td>{{ total_paid }}</td>
+            </tr>
+            <tr>
+                <th>Balance</th>
+                <td>{{ balance }}</td>
+            </tr>
+        </table>
+        <br>
+        <div class="print-button-container">
+            <button class="print-button" onclick="window.print()">Print Statement</button>
+        </div>
+    </div>
+    <br>
+</body>
+</html>
+{% endblock %}

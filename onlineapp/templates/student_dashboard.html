@@ -1,0 +1,86 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+
+<style>
+        .bdy {
+            font-family: Arial, sans-serif;
+            background-color: rgb(243, 228, 186);
+        }
+        .containers {
+            text-align: center;
+            border: 5px solid #09121b;
+            border-radius: 15px;
+            padding: 20px;
+            width: 80%;
+            margin: auto;
+            background-color: whitesmoke;
+        }
+        .circle {
+            border: 1px solid rgb(15, 15, 31);
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            overflow: hidden;
+            line-height: 100px;
+            margin-bottom: 20px;
+        }
+        .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btnn {
+            display: inline-block;
+            margin: 10px;
+            padding: 30px 110px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            
+        }
+
+        .btn-green {
+            background-color: green;
+        }
+        .btn-orange {
+            background-color: orange;
+        }
+        .btn-blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<br><br>
+<body class="bdy">
+    <div class="containers" >
+        <div class="circle">
+            <img src="{{ application.photo.url }}" alt="Profile picture">
+        </div>
+        <h4>Welcome: {{ application.name }}</h4>
+        <p>Course: {{ application.course }} {{ application.level }} &nbsp;&nbsp;&nbsp; YOA: {{ application.year_of_admission }}</p>
+        <div class="buttons">
+            <a href="#" class="btnn btn-green">Personal Information</a>
+            <a href="{% url 'finance' %}" class="btnn btn-orange">Finance</a>
+            <a href="{% url 'student_view_results' %}" class="btnn btn-blue">Academics</a>
+        </div>
+    </div>
+    <br><br>
+</body>
+</html>
+{% endblock %}

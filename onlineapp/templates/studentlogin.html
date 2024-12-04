@@ -19,7 +19,8 @@
        
         <div class="card p-4 shadow" style="max-width: 400px; width: 100%;">
             <h2 class="text-center mb-4">Student Login</h2>
-            <form action="#" method="post">
+            <form action="{% url 'studentlogin' %}" method="post">
+                {% csrf_token %}
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" class="form-control" id="username" name="username" required>
@@ -29,11 +30,11 @@
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
                 <div class="d-grid">
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary" >Login</button>
                 </div>
                 <div class="text-center mt-3">
                     <p class="mb-1">
-                        Don’t have an account? <a href="#">Register</a>
+                        Don’t have an account? <a href="{% url 'studentregistration' %}">Register</a>
                     </p>
                     <p>
                         Forgot your password? <a href="#">Reset password</a>

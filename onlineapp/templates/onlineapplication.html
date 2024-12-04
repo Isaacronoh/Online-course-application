@@ -35,7 +35,7 @@
                             <label for="name" class="form-label">Name</label>
                             <input type="text" class="form-control" id="name" name="name" required>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <label for="gender" class="form-label">Gender</label>
                             <select class="form-select" id="gender" name="gender" required>
                                 <option value="male">Male</option>
@@ -49,7 +49,7 @@
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                     
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <label for="phone" class="form-label">Phone Number</label>
                         <input type="tel" class="form-control" id="phone" name="phone" required>
                     </div>
@@ -60,7 +60,7 @@
                         <input type="number" class="form-control" id="id number" name="id number" required>
                     </div>
                 
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <label for="postalAddress" class="form-label">Postal Address</label>
                         <input type="number" class="form-control" id="adress" name="adress" required>
                     </div>
@@ -75,33 +75,32 @@
                     <p><b>Primary</b></p>
                     <div class="row mb-3">
                         
-                        <div class="col-md-4">
-                            
-                            <input type="text" class="form-control" id="name-primary" name="name-primary" placeholder="Name of the school" required>
+                        <div class="row mb-3">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="name-primary" name="name-primary" placeholder="Name of the school" required>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control" id="grade-primary" name="grade-primary" placeholder="Grade" required>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control" id="year" name="year-primary" placeholder="Year of completion" required>
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                          
-                            <input type="text" class="form-control" id="grade-primary" name="grade-primary" placeholder="Grade" required>
-                        </div>
-                        <div class="col-md-4">
-                           
-                            <input type="text" class="form-control" id="year" name="Year-primary" placeholder="Year of completion" required>
-                        </div>
-                    </div>
+                        
 
                     <!-- Secondary Education -->
                     <p><b>Secondary</b></p>
                     <div class="row mb-3">
                     
-                        <div class="col-md-4">
+                        <div class="col-md-5">
                             
                             <input type="text" class="form-control" id="name-secondary" name="name-secondary" placeholder="Name of the school" required>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             
                             <input type="text" class="form-control" id="grade-secondary" name="grade-secondary" placeholder="Grade" required>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             
                             <input type="text" class="form-control" id="year" name="Year-Secondary" placeholder="Year of completion" required >
                         </div>
@@ -118,6 +117,7 @@
                         <div class="col-md-6">
                             <label for="course-name" class="form-label">Course Name</label>
                             <select class="form-select" id="course" name="course" required>
+                                <option value="" disabled selected>Select course you are Applying</option>
                                 <option value="ICT">Information Communication Technology</option>
                                 <option value="EE">Electrical Engineering</option>
                                 <option value="HR">Human Resource</option>
@@ -127,9 +127,10 @@
                             </select>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <label for="gender" class="form-label">Level</label>
                             <select class="form-select" id="level" name="level" required>
+                                <option value="" disabled selected>Level of study</option>
                                 <option value="level 6">Level 6</option>
                                 <option value="level 5">Level 5</option>
                                 <option value="level 4">Level 4</option>
@@ -139,9 +140,16 @@
                     </div>
              <div class="row mb-3">
                        
-                        <div class="col-md-6">
+                <div class="col-md-6">
+                    <label for="YOA" class="form-label">Year Of Admission</label>
+                    <input type="number" class="form-control" id="YOA" name="YOA" required min="2000" placeholder="Enter Year Of Admission">
+                </div>
+                
+
+                        <div class="col-md-5">
                             <label for="intake" class="form-label">Intake</label>
                             <select class="form-select" id="intake" name="intake" required>
+                                <option value="" disabled selected>Which intake are you applying for?</option>
                                 <option value="January Intake">January Intake</option>
                                 <option value="May Intake">May Intake</option>
                                 <option value="September Intake">September Intake</option>
