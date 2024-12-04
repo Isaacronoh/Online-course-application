@@ -5,7 +5,7 @@ from onlineapp.models import Status
 from django.contrib import messages
 from . serializers import ApplicationSerializer
 from rest_framework import viewsets
-from django.db.models import Q
+from django.db.models import Q,Sum
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password
 # trial import 
@@ -265,5 +265,14 @@ def student_view_results(request):
     if not request.user.is_authenticated:
         return redirect('student_views_results')
 
+    # Fetch results for the logged-in student
     results = Result.objects.filter(student=request.user)
-    return render(request, 'student_view_results.html', {'results': results})
+
+    # Calculate total marks
+    total_marks = results.aggregate(total=Sum('marks'))['total'] or 0
+
+    return render(request, 'student_view_results.html', {
+        'results': results,
+        'total_marks': total_marks
+    })
+

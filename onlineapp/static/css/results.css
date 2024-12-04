@@ -1,0 +1,61 @@
+/* General container styling */
+.container-two {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+    border: 1px solid #000;
+    background-color: #F5F5DC; /* Cream yellow */
+    color: black;
+}
+
+/* Title styling */
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.results-table th, .results-table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+.results-table th {
+    background-color: rgb(227, 227, 241);
+    color: rgb(5, 2, 19);
+}
+
+.results-table tbody tr:nth-child(even) {
+    background-color: #F0F8FF; /* Light blue */
+}
+
+.total-row {
+    background-color: #F5F5DC; /* Cream yellow */
+    color: rgb(58, 7, 241);
+    font-weight: bold;
+}
+
+/* Print button styling */
+.print-button {
+    display: block;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(15, 248, 54);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+}
+

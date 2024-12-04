@@ -1,6 +1,24 @@
-<h1>Edit Student Marks</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save Changes</button>
-</form>
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student Marks</title>
+    <link rel="stylesheet" href="{% static 'css/edit.css' %}">
+</head>
+<body>
+    <div class="container-edit">
+        <h1 class="title">Edit Student Marks</h1>
+        <form method="post" class="edit-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="submit-button">Save Changes</button>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}

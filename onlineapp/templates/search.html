@@ -15,7 +15,33 @@
 
 
     <style>
-        
+.warning {
+    display: inline-block;
+    padding: 20px;
+    border: 5px solid red;
+    background-color: white;
+    color: red;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        border-color: red;
+        box-shadow: 0 0 10px red;
+    }
+    50% {
+        border-color: yellow;
+        box-shadow: 0 0 10px yellow;
+    }
+    100% {
+        border-color: red;
+        box-shadow: 0 0 10px red;
+    }
+}
+
     </style>
 
 </head>
@@ -62,7 +88,7 @@
             </table>
         </div>
                 {% else %}
-                    <h1 class="wan">Invalid Course</h1>
+                    <h1 class="warning">Invalid Course</h1>
                 {% endif %}
        
         <div class="container mt-5">
